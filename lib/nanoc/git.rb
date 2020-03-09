@@ -1,5 +1,6 @@
 require "nanoc/git/version"
 require "nanoc"
+require "octokit"
 
 # GITHUB_TOKEN i.e. 40-char string from https://github.com/settings/tokens
 # GITHUB_REPO  i.e. arkency/blog.arkency.com
