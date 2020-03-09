@@ -17,7 +17,7 @@ module Nanoc
         client = Octokit::Client.new(access_token: ENV['GITHUB_TOKEN'])
         client
           .contents(ENV['GITHUB_REPO'])
-          .select { |item| item.end_with?(".md") }
+          .select { |item| item[:path].end_with?(".md") }
           .map    { |item| client.contents(ENV['GITHUB_REPO'], path: item[:path]) }
           .map    { |item| new_item(content = item[:content], parse_frontmatter(content), Nanoc::Identifier.new(item[:path])) }
       end
