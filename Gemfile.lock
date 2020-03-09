@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     nanoc-git (0.1.0)
+      front_matter_parser (= 0.2.1)
       nanoc (~> 4.0)
       octokit (~> 4.0)
 
@@ -22,6 +23,7 @@ GEM
     equatable (0.6.1)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
+    front_matter_parser (0.2.1)
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     json_schema (0.20.8)
