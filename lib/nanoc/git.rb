@@ -23,7 +23,8 @@ module Nanoc
       end
 
       def parse_frontmatter(content)
-        FrontMatterParser::Parser.new(:md).call(content).front_matter
+        FrontMatterParser::Loader::Yaml.new(whitelist_classes: [Time, Symbol]).call(
+          FrontMatterParser::SyntaxParser::Md.new.call(content)[:front_matter])
       end
     end
   end
