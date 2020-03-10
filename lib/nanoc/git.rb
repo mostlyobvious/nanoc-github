@@ -19,7 +19,7 @@ module Nanoc
           .contents(ENV['GITHUB_REPO'])
           .select { |item| item[:path].end_with?(".md") }
           .map    { |item| client.contents(ENV['GITHUB_REPO'], path: item[:path]) }
-          .map    { |item| new_item(content = item[:content], parse_frontmatter(content), Nanoc::Identifier.new("/#{item[:path]}")) }
+          .map    { |item| new_item(content = Base64.decode64(item[:content]), parse_frontmatter(content), Nanoc::Identifier.new("/#{item[:path]}")) }
       end
 
       def parse_frontmatter(content)
