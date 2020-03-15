@@ -13,6 +13,8 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     colored (1.2)
     concurrent-ruby (1.1.6)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     cri (2.15.10)
     ddmemoize (1.0.0)
       ddmetrics (~> 1.0)
@@ -26,6 +28,7 @@ GEM
     front_matter_parser (0.2.1)
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
+    hashdiff (1.0.1)
     json_schema (0.20.8)
     minitest (5.14.0)
     multipart-post (2.1.1)
@@ -71,6 +74,7 @@ GEM
     public_suffix (4.0.3)
     rake (13.0.1)
     ref (2.0.0)
+    safe_yaml (1.0.5)
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
@@ -81,6 +85,11 @@ GEM
       pastel (~> 0.7.0)
     tty-platform (0.3.0)
     tty-which (0.4.2)
+    vcr (5.1.0)
+    webmock (3.8.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     zeitwerk (2.3.0)
 
 PLATFORMS
@@ -90,6 +99,8 @@ DEPENDENCIES
   minitest (~> 5.14)
   nanoc-github!
   rake (~> 13.0)
+  vcr (~> 5.1.0)
+  webmock (~> 3.8)
 
 BUNDLED WITH
    1.17.3
