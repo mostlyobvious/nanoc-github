@@ -1,4 +1,4 @@
-require "nanoc/git/version"
+require "nanoc/github/version"
 require "nanoc"
 require "octokit"
 require "front_matter_parser"
@@ -7,7 +7,7 @@ require "front_matter_parser"
 # GITHUB_REPO  i.e. arkency/blog.arkency.com
 
 module Nanoc
-  module Git
+  module Github
     class Error < StandardError; end
 
     class Source < Nanoc::DataSource

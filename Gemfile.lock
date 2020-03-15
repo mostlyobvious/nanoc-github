@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    nanoc-git (0.1.0)
+    nanoc-github (0.1.0)
       front_matter_parser (= 0.2.1)
       nanoc (~> 4.0)
       octokit (~> 4.0)
@@ -88,7 +88,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest (~> 5.14)
-  nanoc-git!
+  nanoc-github!
   rake (~> 13.0)
 
 BUNDLED WITH
