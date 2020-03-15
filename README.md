@@ -6,4 +6,4 @@ by static site generator trivia this content is usually mixed with.
 
 ## Status
 
-[![build](https://github.com/pawelpacana/nanoc-git/workflows/.github/workflows/ruby.yml/badge.svg)](https://github.com/pawelpacana/nanoc-git/actions)
+[![build](https://github.com/pawelpacana/nanoc-git/workflows/test/badge.svg)](https://github.com/pawelpacana/nanoc-git/actions)
