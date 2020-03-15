@@ -18,6 +18,5 @@ jobs:
         ruby-version: 2.6.x
     - name: Test
       run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
-        bundle exec rake
+        ./bin/setup
+        ./bin/rake
