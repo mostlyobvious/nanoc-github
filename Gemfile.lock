@@ -69,7 +69,7 @@ GEM
       equatable (~> 0.6)
       tty-color (~> 0.5)
     public_suffix (4.0.3)
-    rake (10.5.0)
+    rake (13.0.1)
     ref (2.0.0)
     sawyer (0.8.2)
       addressable (>= 2.3.5)
@@ -87,10 +87,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.17)
-  minitest (~> 5.0)
+  minitest (~> 5.14)
   nanoc-git!
-  rake (~> 10.0)
+  rake (~> 13.0)
 
 BUNDLED WITH
    1.17.3

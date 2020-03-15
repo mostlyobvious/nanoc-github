@@ -1,45 +1,30 @@
+# frozen_string_literal: true
 
-lib = File.expand_path("../lib", __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "nanoc/git/version"
+require_relative "lib/nanoc/git/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "nanoc-git"
   spec.version       = Nanoc::Git::VERSION
+  spec.summary       = "Nanoc content source from git repository"
+  spec.description   = <<~DESC
+    Nanoc content source from git repository. A way to have your writing in public and open for edition while not being 
+    distracted by static site generator trivia this content is usually mixed with.
+  DESC
   spec.authors       = ["Paweł Pacana"]
-  spec.email         = ["pawel.pacana@gmail.com"]
-
-  spec.summary       = %q{Another Nanoc data source no one released.}
-  spec.homepage      = "https://github.com/pawelpacana/nanoc-git"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-
-    spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/pawelpacana/nanoc-git"
-    spec.metadata["changelog_uri"] = "https://github.com/pawelpacana/nanoc-git/releases"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
-
-  # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.email         = ["pawel.pacana@gmail.com"]
+  spec.homepage      = "https://github.com/pawelpacana/nanoc-git"
+  spec.metadata      = {
+    "homepage_uri"    => spec.homepage,
+    "source_code_uri" => "https://github.com/pawelpacana/nanoc-git",
+    "changelog_uri"   => "https://github.com/pawelpacana/nanoc-git/releases",
+    "bug_tracker_uri" => "https://github.com/pawelpacana/nanoc-git/issues"
+  }
+  spec.files         = Dir.glob("lib/**/*")
   spec.require_paths = ["lib"]
+  spec.extra_rdoc_files = Dir["README.md", "LICENSE.txt"]
 
-  spec.add_dependency "nanoc", "~> 4.0"
-  spec.add_dependency "octokit", "~> 4.0"
+  spec.add_dependency "nanoc",               "~> 4.0"
+  spec.add_dependency "octokit",             "~> 4.0"
   spec.add_dependency "front_matter_parser", "= 0.2.1"
-
-  spec.add_development_dependency "bundler", "~> 1.17"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "minitest", "~> 5.0"
 end
