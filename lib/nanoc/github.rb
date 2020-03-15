@@ -1,4 +1,3 @@
-require "nanoc/github/version"
 require "nanoc"
 require "octokit"
 require "front_matter_parser"
