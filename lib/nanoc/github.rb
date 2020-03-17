@@ -11,7 +11,7 @@ module Nanoc
 
       def items
         repository_items.map do |item|
-          identifier = Nanoc::Identifier.new("/#{item[:path]}")
+          identifier = Nanoc::Identifier.new("/#{item[:name]}")
           new_item(decode(item[:content]), {}, identifier)
         end
       end
@@ -27,9 +27,13 @@ module Nanoc
       end
 
       def repository_items
-        client.contents(repository).map do |item|
-          client.contents(repository, path: item[:path])
-        end
+        client
+          .contents(repository, path: path)
+          .map { |item| client.contents(repository, path: item[:path]) }
+      end
+
+      def path
+        @config[:path]
       end
 
       def repository
