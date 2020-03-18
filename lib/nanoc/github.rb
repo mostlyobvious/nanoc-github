@@ -23,7 +23,7 @@ module Nanoc
       private
 
       def client
-        Octokit::Client.new
+        Octokit::Client.new(access_token: access_token)
       end
 
       def decode(content)
@@ -41,6 +41,10 @@ module Nanoc
           .map    { |item| client.contents(repository, path: item[:path]) }
       rescue Octokit::NotFound => exc
         []
+      end
+
+      def access_token
+        @config[:access_token]
       end
 
       def path

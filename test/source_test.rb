@@ -33,6 +33,14 @@ module Nanoc
         })
       end
 
+      def source_with_token
+        Source.new(site_config, nil, nil, {
+          repository:   "pawelpacana/test-source",
+          path:         "posts",
+          access_token: "secret123"
+        })
+      end
+
       def test_identifier
         assert_equal :github, source_with_posts.class.identifier
       end
@@ -104,6 +112,13 @@ module Nanoc
             Zażółć gęślą jaźń 🙈
           EOC
         end
+      end
+
+      def test_use_access_token
+        stub_request(:get, "https://api.github.com/repos/pawelpacana/test-source/contents/posts")
+          .with(headers: { "Authorization" => "token secret123" })
+          .to_return(status: 404)
+        source_with_token.items
       end
     end
   end
