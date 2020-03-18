@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = Nanoc::Github::VERSION
   spec.summary       = "Nanoc content source from git repository"
   spec.description   = <<~DESC
-    Nanoc content source from git repository. A way to have your writing in public and open for edition while not being 
+    Nanoc content source from git repository. A way to have your writing in public and open for edition while not being
     distracted by static site generator trivia this content is usually mixed with.
   DESC
   spec.authors       = ["Paweł Pacana"]
@@ -24,7 +24,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.extra_rdoc_files = Dir["README.md", "LICENSE.txt"]
 
-  spec.add_dependency "nanoc",               "~> 4.0"
-  spec.add_dependency "octokit",             "~> 4.0"
-  spec.add_dependency "faraday-http-cache"
+  spec.add_dependency "nanoc",   "~> 4.0"
+  spec.add_dependency "octokit", "~> 4.0"
 end
