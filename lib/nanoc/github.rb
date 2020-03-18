@@ -29,8 +29,9 @@ module Nanoc
       def repository_items
         client
           .contents(repository, path: path)
-          .map { |item| client.contents(repository, path: item[:path]) }
-      rescue  Octokit::NotFound => exc
+          .select { |item| item[:type] == "file" }
+          .map    { |item| client.contents(repository, path: item[:path]) }
+      rescue Octokit::NotFound => exc
         []
       end
 

@@ -27,6 +27,12 @@ module Nanoc
         })
       end
 
+      def flat_source
+        Source.new(site_config, nil, nil, {
+          repository: "pawelpacana/test-source",
+        })
+      end
+
       def test_identifier
         assert_equal :github, source_with_posts.class.identifier
       end
@@ -49,6 +55,13 @@ module Nanoc
         VCR.use_cassette("test_no_items_in_path") do
           assert_kind_of Array, empty_source_by_path.items
           assert empty_source_by_path.items.empty?
+        end
+      end
+
+      def test_items_in_root
+        VCR.use_cassette("test_items_in_root") do
+          assert_kind_of Array, flat_source.items
+          refute flat_source.items.empty?
         end
       end
 
