@@ -30,6 +30,8 @@ module Nanoc
         client
           .contents(repository, path: path)
           .map { |item| client.contents(repository, path: item[:path]) }
+      rescue  Octokit::NotFound => exc
+        []
       end
 
       def path

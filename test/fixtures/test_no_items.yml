@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/repos/pawelpacana/test-source/contents/posts
+    uri: https://api.github.com/repos/pawelpacana/test-empty/contents/
     body:
       encoding: US-ASCII
       string: ''
@@ -17,11 +17,11 @@ http_interactions:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Tue, 17 Mar 2020 23:59:31 GMT
+      - Tue, 17 Mar 2020 23:59:30 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -29,22 +29,13 @@ http_interactions:
       Server:
       - GitHub.com
       Status:
-      - 200 OK
+      - 404 Not Found
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '24'
+      - '27'
       X-Ratelimit-Reset:
       - '1584490628'
-      Cache-Control:
-      - public, max-age=60, s-maxage=60
-      Vary:
-      - Accept
-      - Accept-Encoding, Accept, X-Requested-With
-      Etag:
-      - W/"4909ebb1d8da298f252a2c8987c818e45d53bcf1"
-      Last-Modified:
-      - Tue, 17 Mar 2020 23:57:23 GMT
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -65,16 +56,18 @@ http_interactions:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Content-Security-Policy:
       - default-src 'none'
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - AA3A:5FCB:C4ED77:E984BF:5E716463
+      - AA1E:5FC9:6E96A7:81E340:5E716462
     body:
       encoding: ASCII-8BIT
-      string: '[{"name":"post.md","path":"posts/post.md","sha":"3c612584217e21ae00d532a86e0e35685131dbba","size":23,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/post.md","type":"file","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","html":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md"}}]'
+      string: '{"message":"This repository is empty.","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
-  recorded_at: Tue, 17 Mar 2020 23:59:31 GMT
+  recorded_at: Tue, 17 Mar 2020 23:59:30 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md
+    uri: https://api.github.com/repos/pawelpacana/test-empty/contents/
     body:
       encoding: US-ASCII
       string: ''
@@ -89,11 +82,11 @@ http_interactions:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Tue, 17 Mar 2020 23:59:31 GMT
+      - Tue, 17 Mar 2020 23:59:30 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -101,22 +94,13 @@ http_interactions:
       Server:
       - GitHub.com
       Status:
-      - 200 OK
+      - 404 Not Found
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '23'
+      - '26'
       X-Ratelimit-Reset:
       - '1584490628'
-      Cache-Control:
-      - public, max-age=60, s-maxage=60
-      Vary:
-      - Accept
-      - Accept-Encoding, Accept, X-Requested-With
-      Etag:
-      - W/"3c612584217e21ae00d532a86e0e35685131dbba"
-      Last-Modified:
-      - Tue, 17 Mar 2020 23:57:21 GMT
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -137,11 +121,78 @@ http_interactions:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Content-Security-Policy:
       - default-src 'none'
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - AA46:7893:38DC8A:429226:5E716463
+      - AA2A:25132:ABC7C8:C8C68A:5E716462
     body:
       encoding: ASCII-8BIT
-      string: '{"name":"post.md","path":"posts/post.md","sha":"3c612584217e21ae00d532a86e0e35685131dbba","size":23,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/post.md","type":"file","content":"IyBUaXRsZQoKU29tZSBjb250ZW50Lgo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","html":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md"}}'
+      string: '{"message":"This repository is empty.","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
+    http_version: null
+  recorded_at: Tue, 17 Mar 2020 23:59:30 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/pawelpacana/test-empty/contents/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.17.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 17 Mar 2020 23:59:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - GitHub.com
+      Status:
+      - 404 Not Found
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '25'
+      X-Ratelimit-Reset:
+      - '1584490627'
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
+        X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
+      X-Github-Request-Id:
+      - AA36:25130:6EBB98:8229F0:5E716462
+    body:
+      encoding: ASCII-8BIT
+      string: '{"message":"This repository is empty.","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
   recorded_at: Tue, 17 Mar 2020 23:59:31 GMT
 recorded_with: VCR 5.1.0
