@@ -10,11 +10,13 @@ module Nanoc
       identifier :github
 
       def items
-        repository_items.map do |item|
-          identifier     = Nanoc::Identifier.new("/#{item[:name]}")
-          metadata, data = decode(item[:content])
+        @items ||= begin
+          repository_items.map do |item|
+            identifier     = Nanoc::Identifier.new("/#{item[:name]}")
+            metadata, data = decode(item[:content])
 
-          new_item(data, metadata, identifier)
+            new_item(data, metadata, identifier)
+          end
         end
       end
 
