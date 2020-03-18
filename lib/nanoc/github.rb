@@ -27,7 +27,7 @@ module Nanoc
       end
 
       def decode(content)
-        content   = Base64.decode64(content).force_encoding(Encoding::UTF_8)
+        content   = Base64.decode64(content).force_encoding(encoding)
         matchdata = content.match(REGEX)
         metadata  = matchdata ? YAML.safe_load(matchdata[:metadata], permitted_classes: [Time]) : {}
 
@@ -48,6 +48,10 @@ module Nanoc
         []
       end
 
+      def encoding
+        @config[:encoding] || "utf-8"
+      end
+      
       def concurrency
         @config[:concurrency] || 5
       end
