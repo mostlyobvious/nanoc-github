@@ -121,6 +121,10 @@ module Nanoc
           .to_return(status: 404)
         source_with_token.items
       end
+
+      def test_up
+        assert source_with_posts.up
+      end
     end
   end
 end

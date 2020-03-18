@@ -1,6 +1,6 @@
 require "nanoc"
 require "octokit"
-
+require "faraday/http_cache"
 
 module Nanoc
   module Github
