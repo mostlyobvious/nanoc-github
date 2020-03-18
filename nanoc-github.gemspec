@@ -26,5 +26,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "nanoc",           "~> 4.0"
   spec.add_dependency "octokit",         "~> 4.0"
-  spec.add_dependency "concurrent-ruby", "~> 1.1.6"
+  spec.add_dependency "concurrent-ruby", ">= 1.1.6", "< 2.0"
 end
