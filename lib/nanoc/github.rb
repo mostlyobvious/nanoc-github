@@ -23,7 +23,7 @@ module Nanoc
             identifier     = Nanoc::Identifier.new("/#{item[:name]}")
             metadata, data = decode(item[:content])
 
-            new_item(data, metadata, identifier)
+            new_item(data, metadata, identifier, checksum_data: item[:sha])
           end
         end
       end

@@ -85,6 +85,7 @@ module Nanoc
             Some content.
           EOC
           assert_equal ({}), item.attributes
+          assert_equal "3c612584217e21ae00d532a86e0e35685131dbba", item.checksum_data
         end
       end
 
