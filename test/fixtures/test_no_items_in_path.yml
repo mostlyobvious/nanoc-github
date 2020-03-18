@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/repos/pawelpacana/test-source/contents/posts
+    uri: https://api.github.com/repos/pawelpacana/test-source/contents/dummy
     body:
       encoding: US-ASCII
       string: ''
@@ -17,11 +17,11 @@ http_interactions:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Wed, 18 Mar 2020 00:02:36 GMT
+      - Wed, 18 Mar 2020 00:02:38 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -29,22 +29,13 @@ http_interactions:
       Server:
       - GitHub.com
       Status:
-      - 200 OK
+      - 404 Not Found
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '8'
+      - '2'
       X-Ratelimit-Reset:
       - '1584490627'
-      Cache-Control:
-      - public, max-age=60, s-maxage=60
-      Vary:
-      - Accept
-      - Accept-Encoding, Accept, X-Requested-With
-      Etag:
-      - W/"4909ebb1d8da298f252a2c8987c818e45d53bcf1"
-      Last-Modified:
-      - Tue, 17 Mar 2020 23:57:23 GMT
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -65,16 +56,18 @@ http_interactions:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Content-Security-Policy:
       - default-src 'none'
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - E3C4:789A:CF592F:F495AC:5E71651C
+      - E3FE:16869:3D174E:479DE4:5E71651E
     body:
       encoding: ASCII-8BIT
-      string: '[{"name":"post.md","path":"posts/post.md","sha":"3c612584217e21ae00d532a86e0e35685131dbba","size":23,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/post.md","type":"file","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","html":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md"}}]'
+      string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 00:02:36 GMT
+  recorded_at: Wed, 18 Mar 2020 00:02:38 GMT
 - request:
     method: get
-    uri: https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md
+    uri: https://api.github.com/repos/pawelpacana/test-source/contents/dummy
     body:
       encoding: US-ASCII
       string: ''
@@ -89,11 +82,11 @@ http_interactions:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
       Date:
-      - Wed, 18 Mar 2020 00:02:37 GMT
+      - Wed, 18 Mar 2020 00:02:39 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -101,22 +94,13 @@ http_interactions:
       Server:
       - GitHub.com
       Status:
-      - 200 OK
+      - 404 Not Found
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '7'
+      - '1'
       X-Ratelimit-Reset:
       - '1584490628'
-      Cache-Control:
-      - public, max-age=60, s-maxage=60
-      Vary:
-      - Accept
-      - Accept-Encoding, Accept, X-Requested-With
-      Etag:
-      - W/"3c612584217e21ae00d532a86e0e35685131dbba"
-      Last-Modified:
-      - Tue, 17 Mar 2020 23:57:21 GMT
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -137,11 +121,13 @@ http_interactions:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       Content-Security-Policy:
       - default-src 'none'
+      Vary:
+      - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - E3D2:1686C:D27AFA:F8349F:5E71651C
+      - E402:2497:A45C32:C2011F:5E71651E
     body:
       encoding: ASCII-8BIT
-      string: '{"name":"post.md","path":"posts/post.md","sha":"3c612584217e21ae00d532a86e0e35685131dbba","size":23,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/post.md","type":"file","content":"IyBUaXRsZQoKU29tZSBjb250ZW50Lgo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","html":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md"}}'
+      string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 00:02:37 GMT
+  recorded_at: Wed, 18 Mar 2020 00:02:39 GMT
 recorded_with: VCR 5.1.0

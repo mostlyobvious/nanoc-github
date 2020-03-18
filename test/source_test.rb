@@ -20,6 +20,13 @@ module Nanoc
         })
       end
 
+      def empty_source_by_path
+        Source.new(site_config, nil, nil, {
+          repository: "pawelpacana/test-source",
+          path:       "dummy"
+        })
+      end
+
       def test_identifier
         assert_equal :github, source_with_posts.class.identifier
       end
@@ -31,10 +38,17 @@ module Nanoc
         end
       end
 
-      def test_no_items
-        VCR.use_cassette("test_no_items") do
+      def test_no_items_in_reposistory
+        VCR.use_cassette("test_no_items_in_repository") do
           assert_kind_of Array, empty_source.items
           assert empty_source.items.empty?
+        end
+      end
+
+      def test_no_items_in_path
+        VCR.use_cassette("test_no_items_in_path") do
+          assert_kind_of Array, empty_source_by_path.items
+          assert empty_source_by_path.items.empty?
         end
       end
 

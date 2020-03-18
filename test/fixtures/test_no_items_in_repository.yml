@@ -21,7 +21,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 17 Mar 2020 23:59:30 GMT
+      - Wed, 18 Mar 2020 00:02:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,7 +33,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '27'
+      - '10'
       X-Ratelimit-Reset:
       - '1584490628'
       X-Github-Media-Type:
@@ -59,12 +59,12 @@ http_interactions:
       Vary:
       - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - AA1E:5FC9:6E96A7:81E340:5E716462
+      - E3B8:2485:4381FE:4E8B21:5E71651B
     body:
       encoding: ASCII-8BIT
       string: '{"message":"This repository is empty.","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
-  recorded_at: Tue, 17 Mar 2020 23:59:30 GMT
+  recorded_at: Wed, 18 Mar 2020 00:02:36 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/pawelpacana/test-empty/contents/
@@ -86,7 +86,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 17 Mar 2020 23:59:30 GMT
+      - Wed, 18 Mar 2020 00:02:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -98,7 +98,7 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '26'
+      - '9'
       X-Ratelimit-Reset:
       - '1584490628'
       X-Github-Media-Type:
@@ -124,75 +124,10 @@ http_interactions:
       Vary:
       - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - AA2A:25132:ABC7C8:C8C68A:5E716462
+      - E3BC:249C:D4E69E:FA80C6:5E71651C
     body:
       encoding: ASCII-8BIT
       string: '{"message":"This repository is empty.","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
-  recorded_at: Tue, 17 Mar 2020 23:59:30 GMT
-- request:
-    method: get
-    uri: https://api.github.com/repos/pawelpacana/test-empty/contents/
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.github.v3+json
-      User-Agent:
-      - Octokit Ruby Gem 4.17.0
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Tue, 17 Mar 2020 23:59:31 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Server:
-      - GitHub.com
-      Status:
-      - 404 Not Found
-      X-Ratelimit-Limit:
-      - '60'
-      X-Ratelimit-Remaining:
-      - '25'
-      X-Ratelimit-Reset:
-      - '1584490627'
-      X-Github-Media-Type:
-      - github.v3; format=json
-      Access-Control-Expose-Headers:
-      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
-        X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval,
-        X-GitHub-Media-Type, Deprecation, Sunset
-      Access-Control-Allow-Origin:
-      - "*"
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubdomains; preload
-      X-Frame-Options:
-      - deny
-      X-Content-Type-Options:
-      - nosniff
-      X-Xss-Protection:
-      - 1; mode=block
-      Referrer-Policy:
-      - origin-when-cross-origin, strict-origin-when-cross-origin
-      Content-Security-Policy:
-      - default-src 'none'
-      Vary:
-      - Accept-Encoding, Accept, X-Requested-With
-      X-Github-Request-Id:
-      - AA36:25130:6EBB98:8229F0:5E716462
-    body:
-      encoding: ASCII-8BIT
-      string: '{"message":"This repository is empty.","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
-    http_version: null
-  recorded_at: Tue, 17 Mar 2020 23:59:31 GMT
+  recorded_at: Wed, 18 Mar 2020 00:02:36 GMT
 recorded_with: VCR 5.1.0
