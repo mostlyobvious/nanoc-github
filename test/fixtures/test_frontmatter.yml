@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 18 Mar 2020 01:44:08 GMT
+      - Wed, 18 Mar 2020 00:54:53 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,9 +33,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '45'
+      - '42'
       X-Ratelimit-Reset:
-      - '1584496971'
+      - '1584496486'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
@@ -66,12 +66,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - 6A9D:25133:1067C4A:13332B9:5E717CE7
+      - 7238:789A:E7F328:110C1DB:5E71715D
     body:
       encoding: ASCII-8BIT
       string: '[{"name":"post.md","path":"posts/post.md","sha":"3c612584217e21ae00d532a86e0e35685131dbba","size":23,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/post.md","type":"file","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","html":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md"}},{"name":"x-post.md","path":"posts/x-post.md","sha":"34773833eda5caf2352a1ab8c1ba34e246ab9554","size":150,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/posts/x-post.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/34773833eda5caf2352a1ab8c1ba34e246ab9554","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/x-post.md","type":"file","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/34773833eda5caf2352a1ab8c1ba34e246ab9554","html":"https://github.com/pawelpacana/test-source/blob/master/posts/x-post.md"}}]'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 01:44:08 GMT
+  recorded_at: Wed, 18 Mar 2020 00:54:53 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md
@@ -93,7 +93,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 18 Mar 2020 01:44:08 GMT
+      - Wed, 18 Mar 2020 00:54:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -105,9 +105,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '44'
+      - '41'
       X-Ratelimit-Reset:
-      - '1584496972'
+      - '1584496486'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
@@ -138,12 +138,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - 6A8A:1118:D723B0:FAF265:5E717CE8
+      - 7246:25130:7B339F:90703B:5E71715D
     body:
       encoding: ASCII-8BIT
       string: '{"name":"post.md","path":"posts/post.md","sha":"3c612584217e21ae00d532a86e0e35685131dbba","size":23,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/post.md","type":"file","content":"IyBUaXRsZQoKU29tZSBjb250ZW50Lgo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba","html":"https://github.com/pawelpacana/test-source/blob/master/posts/post.md"}}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 01:44:08 GMT
+  recorded_at: Wed, 18 Mar 2020 00:54:54 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md
@@ -165,7 +165,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 18 Mar 2020 01:44:08 GMT
+      - Wed, 18 Mar 2020 00:54:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -177,9 +177,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '43'
+      - '40'
       X-Ratelimit-Reset:
-      - '1584496972'
+      - '1584496486'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
@@ -210,10 +210,10 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - 6A65:25132:D2C14D:F5184C:5E717CE8
+      - 7250:1686B:B62CD4:D622CF:5E71715E
     body:
       encoding: ASCII-8BIT
       string: '{"name":"x-post.md","path":"posts/x-post.md","sha":"34773833eda5caf2352a1ab8c1ba34e246ab9554","size":150,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/posts/x-post.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/34773833eda5caf2352a1ab8c1ba34e246ab9554","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/x-post.md","type":"file","content":"LS0tCnB1Ymxpc2hlZF9hdDogMTk3MC0wMS0wMSAwMTowMDowMCArMDEwMAp0\nYWdzOiBbJ29uZScsICdicmlkZ2UnLCAndG9vJywgJ2ZhciddCmF1dGhvcjog\nSmFuIE1hcmlhCi0tLQoKIyBXaGF0IHdoYXQKClphxbzDs8WCxIcgZ8SZxZts\nxIUgamHFusWEIPCfmYgK\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/34773833eda5caf2352a1ab8c1ba34e246ab9554","html":"https://github.com/pawelpacana/test-source/blob/master/posts/x-post.md"}}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 01:44:08 GMT
+  recorded_at: Wed, 18 Mar 2020 00:54:54 GMT
 recorded_with: VCR 5.1.0

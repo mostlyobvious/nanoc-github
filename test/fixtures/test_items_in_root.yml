@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 18 Mar 2020 01:44:04 GMT
+      - Wed, 18 Mar 2020 00:54:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,9 +33,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '55'
+      - '51'
       X-Ratelimit-Reset:
-      - '1584496972'
+      - '1584496486'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
@@ -66,12 +66,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - 6ACB:5FCB:F331DA:11EC69A:5E717CE4
+      - 71F0:5FCA:B7B428:D76098:5E717159
     body:
       encoding: ASCII-8BIT
       string: '[{"name":"README.md","path":"README.md","sha":"a84526372206fe45705a4096088c2a89c0be0fc4","size":80,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/README.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/README.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/a84526372206fe45705a4096088c2a89c0be0fc4","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/README.md","type":"file","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/README.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/a84526372206fe45705a4096088c2a89c0be0fc4","html":"https://github.com/pawelpacana/test-source/blob/master/README.md"}},{"name":"posts","path":"posts","sha":"44e57b3791206cb42ba38741505d6d04ce955c51","size":0,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts?ref=master","html_url":"https://github.com/pawelpacana/test-source/tree/master/posts","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/trees/44e57b3791206cb42ba38741505d6d04ce955c51","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/trees/44e57b3791206cb42ba38741505d6d04ce955c51","html":"https://github.com/pawelpacana/test-source/tree/master/posts"}}]'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 01:44:04 GMT
+  recorded_at: Wed, 18 Mar 2020 00:54:50 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/pawelpacana/test-source/contents/README.md
@@ -93,7 +93,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 18 Mar 2020 01:44:04 GMT
+      - Wed, 18 Mar 2020 00:54:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -105,9 +105,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '54'
+      - '50'
       X-Ratelimit-Reset:
-      - '1584496972'
+      - '1584496486'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
@@ -138,12 +138,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - 6A5E:7895:8679D1:9D1D25:5E717CE4
+      - 71F8:789A:E7ED0C:110BAAB:5E71715A
     body:
       encoding: ASCII-8BIT
       string: '{"name":"README.md","path":"README.md","sha":"a84526372206fe45705a4096088c2a89c0be0fc4","size":80,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/README.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/README.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/a84526372206fe45705a4096088c2a89c0be0fc4","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/README.md","type":"file","content":"U2FtcGxlIGNvbnRlbnQgZm9yIFtuYW5vYy1naXRodWJdKGh0dHBzOi8vZ2l0\naHViLmNvbS9wYXdlbHBhY2FuYS9uYW5vYy1naXRodWIpLgo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/README.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/a84526372206fe45705a4096088c2a89c0be0fc4","html":"https://github.com/pawelpacana/test-source/blob/master/README.md"}}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 01:44:04 GMT
+  recorded_at: Wed, 18 Mar 2020 00:54:50 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/pawelpacana/test-source/contents/
@@ -165,7 +165,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 18 Mar 2020 01:44:05 GMT
+      - Wed, 18 Mar 2020 00:54:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -177,9 +177,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '53'
+      - '49'
       X-Ratelimit-Reset:
-      - '1584496972'
+      - '1584496486'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
@@ -210,12 +210,12 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - 6A6D:2497:C74630:EA1069:5E717CE4
+      - 71FC:5FC9:7B6863:908289:5E71715A
     body:
       encoding: ASCII-8BIT
       string: '[{"name":"README.md","path":"README.md","sha":"a84526372206fe45705a4096088c2a89c0be0fc4","size":80,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/README.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/README.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/a84526372206fe45705a4096088c2a89c0be0fc4","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/README.md","type":"file","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/README.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/a84526372206fe45705a4096088c2a89c0be0fc4","html":"https://github.com/pawelpacana/test-source/blob/master/README.md"}},{"name":"posts","path":"posts","sha":"44e57b3791206cb42ba38741505d6d04ce955c51","size":0,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/posts?ref=master","html_url":"https://github.com/pawelpacana/test-source/tree/master/posts","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/trees/44e57b3791206cb42ba38741505d6d04ce955c51","download_url":null,"type":"dir","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/posts?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/trees/44e57b3791206cb42ba38741505d6d04ce955c51","html":"https://github.com/pawelpacana/test-source/tree/master/posts"}}]'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 01:44:05 GMT
+  recorded_at: Wed, 18 Mar 2020 00:54:50 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/pawelpacana/test-source/contents/README.md
@@ -237,7 +237,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 18 Mar 2020 01:44:05 GMT
+      - Wed, 18 Mar 2020 00:54:51 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -249,9 +249,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '52'
+      - '48'
       X-Ratelimit-Reset:
-      - '1584496972'
+      - '1584496486'
       Cache-Control:
       - public, max-age=60, s-maxage=60
       Vary:
@@ -282,10 +282,10 @@ http_interactions:
       Content-Security-Policy:
       - default-src 'none'
       X-Github-Request-Id:
-      - 6A4A:5FCB:F334EE:11ECA22:5E717CE5
+      - 7202:1686B:B6287B:D61DAF:5E71715B
     body:
       encoding: ASCII-8BIT
       string: '{"name":"README.md","path":"README.md","sha":"a84526372206fe45705a4096088c2a89c0be0fc4","size":80,"url":"https://api.github.com/repos/pawelpacana/test-source/contents/README.md?ref=master","html_url":"https://github.com/pawelpacana/test-source/blob/master/README.md","git_url":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/a84526372206fe45705a4096088c2a89c0be0fc4","download_url":"https://raw.githubusercontent.com/pawelpacana/test-source/master/README.md","type":"file","content":"U2FtcGxlIGNvbnRlbnQgZm9yIFtuYW5vYy1naXRodWJdKGh0dHBzOi8vZ2l0\naHViLmNvbS9wYXdlbHBhY2FuYS9uYW5vYy1naXRodWIpLgo=\n","encoding":"base64","_links":{"self":"https://api.github.com/repos/pawelpacana/test-source/contents/README.md?ref=master","git":"https://api.github.com/repos/pawelpacana/test-source/git/blobs/a84526372206fe45705a4096088c2a89c0be0fc4","html":"https://github.com/pawelpacana/test-source/blob/master/README.md"}}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 01:44:05 GMT
+  recorded_at: Wed, 18 Mar 2020 00:54:51 GMT
 recorded_with: VCR 5.1.0
