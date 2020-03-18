@@ -25,7 +25,7 @@ module Nanoc
       end
 
       def decode(content)
-        content   = Base64.decode64(content)
+        content   = Base64.decode64(content).force_encoding(Encoding::UTF_8)
         matchdata = content.match(REGEX)
         metadata  = matchdata ? YAML.safe_load(matchdata[:metadata], permitted_classes: [Time]) : {}
 

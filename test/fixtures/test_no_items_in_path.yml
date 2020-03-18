@@ -21,7 +21,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 18 Mar 2020 00:28:06 GMT
+      - Wed, 18 Mar 2020 00:54:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,9 +33,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '6'
+      - '53'
       X-Ratelimit-Reset:
-      - '1584493425'
+      - '1584496486'
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -59,12 +59,12 @@ http_interactions:
       Vary:
       - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - 1342:1686C:DEAD53:1062E5F:5E716B15
+      - 71E4:5FC9:7B66E3:9080D2:5E717158
     body:
       encoding: ASCII-8BIT
       string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 00:28:06 GMT
+  recorded_at: Wed, 18 Mar 2020 00:54:49 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/pawelpacana/test-source/contents/dummy
@@ -86,7 +86,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 18 Mar 2020 00:28:06 GMT
+      - Wed, 18 Mar 2020 00:54:49 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -98,9 +98,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '5'
+      - '52'
       X-Ratelimit-Reset:
-      - '1584493426'
+      - '1584496486'
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -124,10 +124,10 @@ http_interactions:
       Vary:
       - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - 1354:1119:D3271A:F9BBCF:5E716B16
+      - 71EA:1116:49A5E6:55CD67:5E717159
     body:
       encoding: ASCII-8BIT
       string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 00:28:06 GMT
+  recorded_at: Wed, 18 Mar 2020 00:54:49 GMT
 recorded_with: VCR 5.1.0

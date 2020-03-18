@@ -84,18 +84,25 @@ module Nanoc
         VCR.use_cassette("test_frontmatter") do
           item = source_with_posts.items[1]
 
-          assert_kind_of Nanoc::Core::Item, item
           assert_equal Nanoc::Identifier.new("/x-post.md"), item.identifier
-          assert_equal <<~EOC, item.content.string
-            # What what
-
-            Do that thing.
-          EOC
           assert_equal ({
             published_at: Time.at(0),
             tags: %w(one bridge too far),
             author: "Jan Maria"
           }), item.attributes
+        end
+      end
+
+      def test_utf8
+        VCR.use_cassette("test_utf8") do
+          item = source_with_posts.items[1]
+
+          assert_equal Nanoc::Identifier.new("/x-post.md"), item.identifier
+          assert_equal <<~EOC, item.content.string
+            # What what
+
+            Zażółć gęślą jaźń 🙈
+          EOC
         end
       end
     end
