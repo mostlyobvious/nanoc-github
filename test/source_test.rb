@@ -10,26 +10,30 @@ module Nanoc
       def source_with_posts
         Source.new(site_config, nil, nil, {
           repository: "pawelpacana/test-source",
-          path:       "posts"
+          path:       "posts",
+          concurrency:  1
         })
       end
 
       def empty_source
         Source.new(site_config, nil, nil, {
           repository: "pawelpacana/test-empty",
+          concurrency:  1
         })
       end
 
       def empty_source_by_path
         Source.new(site_config, nil, nil, {
           repository: "pawelpacana/test-source",
-          path:       "dummy"
+          path:       "dummy",
+          concurrency:  1
         })
       end
 
       def flat_source
         Source.new(site_config, nil, nil, {
           repository: "pawelpacana/test-source",
+          concurrency:  1
         })
       end
 
@@ -37,7 +41,8 @@ module Nanoc
         Source.new(site_config, nil, nil, {
           repository:   "pawelpacana/test-source",
           path:         "posts",
-          access_token: "secret123"
+          access_token: "secret123",
+          concurrency:  1
         })
       end
 

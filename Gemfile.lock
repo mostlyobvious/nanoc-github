@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     nanoc-github (0.1.0)
+      concurrent-ruby (~> 1.1.6)
       nanoc (~> 4.0)
       octokit (~> 4.0)
 

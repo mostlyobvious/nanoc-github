@@ -1,6 +1,6 @@
 require "nanoc"
 require "octokit"
-
+require "concurrent-ruby"
 
 module Nanoc
   module Github
@@ -35,12 +35,21 @@ module Nanoc
       end
 
       def repository_items
-        client
-          .contents(repository, path: path)
-          .select { |item| item[:type] == "file" }
-          .map    { |item| client.contents(repository, path: item[:path]) }
+        pool  = Concurrent::FixedThreadPool.new(concurrency)
+        items = Concurrent::Array.new
+          client
+            .contents(repository, path: path)
+            .select { |item| item[:type] == "file" }
+            .each   { |item| pool.post { items << client.contents(repository, path: item[:path]) } }
+        pool.shutdown
+        pool.wait_for_termination
+        items
       rescue Octokit::NotFound => exc
         []
+      end
+
+      def concurrency
+        @config[:concurrency] || 5
       end
 
       def access_token
