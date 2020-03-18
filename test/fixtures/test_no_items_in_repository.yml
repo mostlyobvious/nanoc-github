@@ -21,7 +21,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 18 Mar 2020 00:02:36 GMT
+      - Wed, 18 Mar 2020 00:28:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,9 +33,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '10'
+      - '1'
       X-Ratelimit-Reset:
-      - '1584490628'
+      - '1584493426'
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -59,12 +59,12 @@ http_interactions:
       Vary:
       - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - E3B8:2485:4381FE:4E8B21:5E71651B
+      - 1394:248F:788795:8CE03D:5E716B17
     body:
       encoding: ASCII-8BIT
       string: '{"message":"This repository is empty.","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 00:02:36 GMT
+  recorded_at: Wed, 18 Mar 2020 00:28:08 GMT
 - request:
     method: get
     uri: https://api.github.com/repos/pawelpacana/test-empty/contents/
@@ -86,7 +86,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 18 Mar 2020 00:02:36 GMT
+      - Wed, 18 Mar 2020 00:28:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -98,9 +98,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '60'
       X-Ratelimit-Remaining:
-      - '9'
+      - '0'
       X-Ratelimit-Reset:
-      - '1584490628'
+      - '1584493425'
       X-Github-Media-Type:
       - github.v3; format=json
       Access-Control-Expose-Headers:
@@ -124,10 +124,10 @@ http_interactions:
       Vary:
       - Accept-Encoding, Accept, X-Requested-With
       X-Github-Request-Id:
-      - E3BC:249C:D4E69E:FA80C6:5E71651C
+      - 13AC:248F:7887FA:8CE0B5:5E716B18
     body:
       encoding: ASCII-8BIT
       string: '{"message":"This repository is empty.","documentation_url":"https://developer.github.com/v3/repos/contents/#get-contents"}'
     http_version: null
-  recorded_at: Wed, 18 Mar 2020 00:02:36 GMT
+  recorded_at: Wed, 18 Mar 2020 00:28:08 GMT
 recorded_with: VCR 5.1.0

@@ -4,15 +4,17 @@ require "octokit"
 
 module Nanoc
   module Github
-    Error = Class.new(StandardError)
+    REGEX = /^(?<metadata>---\s*\n.*?\n?)^(---\s*$\n?)/m
 
     class Source < Nanoc::DataSource
       identifier :github
 
       def items
         repository_items.map do |item|
-          identifier = Nanoc::Identifier.new("/#{item[:name]}")
-          new_item(decode(item[:content]), {}, identifier)
+          identifier     = Nanoc::Identifier.new("/#{item[:name]}")
+          metadata, data = decode(item[:content])
+
+          new_item(data, metadata, identifier)
         end
       end
 
@@ -23,7 +25,11 @@ module Nanoc
       end
 
       def decode(content)
-        Base64.decode64(content)
+        content   = Base64.decode64(content)
+        matchdata = content.match(REGEX)
+        metadata  = matchdata ? YAML.load(matchdata[:metadata]) : {}
+
+        [metadata, content.gsub(REGEX, '')]
       end
 
       def repository_items
