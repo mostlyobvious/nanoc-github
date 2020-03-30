@@ -23,7 +23,7 @@ At last, enable github data source in `nanoc.yaml`:
 data_sources:
   - type: github
     items_root: /posts                             # the root where items should be mounted
-    repository: arkency/posts.                     # organization/repository on github to use as a source of content
+    repository: arkency/posts                      # organization/repository on github to use as a source of content
     encoding: utf-8                                # how to decode content                                            (default: utf-8)
     access_token: secret123                        # github access token, not required for public repositories        (default: nil)
     path: posts/                                   # subdirectory of the content in given repository                  (default: nil)
