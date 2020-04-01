@@ -1,6 +1,6 @@
 # Nanoc::Github
 
-Content source from git repository. A way to have your writing in public and open for editing while not being distracted 
+Content source from git repository. A way to have your writing in public and open for editing while not being distracted
 by static site generator trivia this content is usually mixed with.
 
 ## Usage
@@ -28,6 +28,7 @@ data_sources:
     access_token: secret123                        # github access token, not required for public repositories        (default: nil)
     path: posts/                                   # subdirectory of the content in given repository                  (default: nil)
     concurrency: 10                                # how many threads to spawn to fetch data                          (default: 5)
+    verbose: true                                  # show HTTP cache hit/miss on STDOUT                               (default: false)
 ```
 
 ## Status

@@ -1,13 +1,53 @@
 require "nanoc"
 require "octokit"
 require "concurrent-ruby"
+require "faraday/http_cache"
+require "pstore"
 
 module Nanoc
   module Github
     REGEX = /^(?<metadata>---\s*\n.*?\n?)^(---\s*$\n?)/m
 
+    class Cache
+      def initialize(cache_dir)
+        @store = PStore.new(File.join(cache_dir, "nanoc-github.store"))
+      end
+
+      def write(name, value, options = nil)
+        store.transaction { store[name] = value }
+      end
+
+      def read(name, options = nil)
+        store.transaction(true) { store[name] }
+      end
+
+      def delete(name, options = nil)
+        store.transaction { store.delete(name) }
+      end
+
+      private
+      attr_reader :store
+    end
+
     class Source < Nanoc::DataSource
       identifier :github
+
+      def up
+        stack = Faraday::RackBuilder.new do |builder|
+          builder.use Faraday::HttpCache,
+            serializer: Marshal,
+            shared_cache: false,
+            store: Cache.new(tmp_dir),
+            logger: verbose ? logger : nil
+          builder.use Faraday::Request::Retry,
+            exceptions: [Octokit::ServerError]
+          builder.use Octokit::Middleware::FollowRedirects
+          builder.use Octokit::Response::RaiseError
+          builder.use Octokit::Response::FeedParser
+          builder.adapter Faraday.default_adapter
+        end
+        Octokit.middleware = stack
+      end
 
       def items
         @items ||= begin
@@ -51,7 +91,7 @@ module Nanoc
       def encoding
         @config[:encoding] || "utf-8"
       end
-      
+
       def concurrency
         @config[:concurrency] || 5
       end
@@ -66,6 +106,18 @@ module Nanoc
 
       def repository
         @config[:repository]
+      end
+
+      def verbose
+        @config[:verbose]
+      end
+
+      def logger
+        Logger.new(STDOUT)
+      end
+
+      def tmp_dir
+        File.join(@site_config.dir, "tmp")
       end
     end
   end

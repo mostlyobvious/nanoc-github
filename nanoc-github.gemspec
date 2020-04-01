@@ -24,7 +24,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.extra_rdoc_files = Dir["README.md", "LICENSE.txt"]
 
-  spec.add_dependency "nanoc",           "~> 4.0"
-  spec.add_dependency "octokit",         "~> 4.0"
-  spec.add_dependency "concurrent-ruby", ">= 1.1.6", "< 2.0"
+  spec.add_dependency "nanoc",              "~> 4.0"
+  spec.add_dependency "octokit",            "~> 4.0"
+  spec.add_dependency "concurrent-ruby",    ">= 1.1.6", "< 2.0"
+  spec.add_dependency "faraday-http-cache"
 end
