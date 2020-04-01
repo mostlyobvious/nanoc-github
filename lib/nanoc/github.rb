@@ -10,7 +10,7 @@ module Nanoc
 
     class Cache
       def initialize(cache_dir)
-        @store = PStore.new(File.join(cache_dir, "nanoc-github.store"))
+        @store = PStore.new(File.join(cache_dir, "nanoc-github.store"), true)
       end
 
       def write(name, value, options = nil)
