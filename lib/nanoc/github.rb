@@ -29,11 +29,25 @@ module Nanoc
       attr_reader :store
     end
 
+    class ModifyMaxAge < Faraday::Middleware
+      def initialize(app, time:)
+        @app  = app
+        @time = Integer(time)
+      end
+
+      def call(request_env)
+        @app.call(request_env).on_complete do |response_env|
+          response_env[:response_headers][:cache_control] = "public, max-age=#{@time}, s-maxage=#{@time}"
+        end
+      end
+    end
+
     class Source < Nanoc::DataSource
       identifier :github
 
       def up
         stack = Faraday::RackBuilder.new do |builder|
+          builder.use ModifyMaxAge, time: max_age
           builder.use Faraday::HttpCache,
             serializer: Marshal,
             shared_cache: false,
@@ -110,6 +124,10 @@ module Nanoc
 
       def verbose
         @config[:verbose]
+      end
+
+      def max_age
+        @config[:max_age] || 60
       end
 
       def logger
