@@ -29,6 +29,7 @@ data_sources:
     path: posts/                                   # subdirectory of the content in given repository                  (default: nil)
     concurrency: 10                                # how many threads to spawn to fetch data                          (default: 5)
     verbose: true                                  # show HTTP cache hit/miss on STDOUT                               (default: false)
+    max_age: 600                                   # override time in which cached content is considered to be fresh  (default: 60)
 ```
 
 ## Status
