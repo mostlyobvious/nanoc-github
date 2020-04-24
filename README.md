@@ -1,6 +1,6 @@
 # Nanoc::Github
 
-Content source from git repository. A way to have your writing in public and open for editing while not being distracted
+[Nanoc](https://nanoc.ws) content source from git repository. A way to have your writing in public and open for editing while not being distracted
 by static site generator trivia this content is usually mixed with.
 
 ## Usage
