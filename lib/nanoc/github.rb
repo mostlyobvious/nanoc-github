@@ -47,12 +47,12 @@ module Nanoc
 
       def up
         stack = Faraday::RackBuilder.new do |builder|
-          builder.use ModifyMaxAge, time: max_age
           builder.use Faraday::HttpCache,
             serializer: Marshal,
             shared_cache: false,
             store: Cache.new(tmp_dir),
             logger: verbose ? logger : nil
+          builder.use ModifyMaxAge, time: max_age
           builder.use Faraday::Request::Retry,
             exceptions: [Octokit::ServerError]
           builder.use Octokit::Middleware::FollowRedirects
