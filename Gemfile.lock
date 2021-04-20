@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    nanoc-github (1.1.0)
+    nanoc-github (1.2.0)
       concurrent-ruby (>= 1.1.6, < 2.0)
       faraday-http-cache
       nanoc (~> 4.0)
