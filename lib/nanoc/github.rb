@@ -65,12 +65,14 @@ module Nanoc
 
       def items
         @items ||= begin
-          repository_items.map do |item|
-            identifier     = Nanoc::Identifier.new("/#{item[:name]}")
-            metadata, data = decode(item[:content])
+          repository_items
+            .sort_by { |item| item[:name] }
+            .map     { |item|
+              identifier     = Nanoc::Identifier.new("/#{item[:name]}")
+              metadata, data = decode(item[:content])
 
-            new_item(data, metadata, identifier, checksum_data: item[:sha])
-          end
+              new_item(data, metadata, identifier, checksum_data: item[:sha])
+            }
         end
       end
 
