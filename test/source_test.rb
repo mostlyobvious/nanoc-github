@@ -16,6 +16,15 @@ module Nanoc
         })
       end
 
+      def source_with_concurrency
+        Source.new(site_config, nil, nil, {
+          repository:   "pawelpacana/test-source",
+          path:         "posts",
+          encoding:     "utf-8",
+          concurrency:  2,
+        })
+      end
+
       def empty_source
         Source.new(site_config, nil, nil, {
           repository:   "pawelpacana/test-empty",
@@ -77,6 +86,105 @@ module Nanoc
           assert_kind_of Array, flat_source.items
           refute flat_source.items.empty?
         end
+      end
+
+      def post_body
+        {
+          name: "post.md",
+          path: "posts/post.md",
+          sha: "3c612584217e21ae00d532a86e0e35685131dbba",
+          size: 23,
+          url: "https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master",
+          html_url: "https://github.com/pawelpacana/test-source/blob/master/posts/post.md",
+          git_url: "https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba",
+          download_url: "https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/post.md",
+          type: "file",
+          content: "IyBUaXRsZQoKU29tZSBjb250ZW50Lgo=\n",
+          encoding: "base64",
+          _links: {
+            self: "https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master",
+            git: "https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba",
+            html: "https://github.com/pawelpacana/test-source/blob/master/posts/post.md"
+          }
+        }
+      end
+
+      def x_post_body
+        {
+          name: "x-post.md",
+          path: "posts/x-post.md",
+          sha: "34773833eda5caf2352a1ab8c1ba34e246ab9554",
+          size: 150,
+          url: "https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md?ref=master",
+          html_url: "https://github.com/pawelpacana/test-source/blob/master/posts/x-post.md",
+          git_url: "https://api.github.com/repos/pawelpacana/test-source/git/blobs/34773833eda5caf2352a1ab8c1ba34e246ab9554",
+          download_url: "https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/x-post.md",
+          type: "file",
+          content: "LS0tCnB1Ymxpc2hlZF9hdDogMTk3MC0wMS0wMSAwMTowMDowMCArMDEwMAp0\nYWdzOiBbJ29uZScsICdicmlkZ2UnLCAndG9vJywgJ2ZhciddCmF1dGhvcjog\nSmFuIE1hcmlhCi0tLQoKIyBXaGF0IHdoYXQKClphxbzDs8WCxIcgZ8SZxZts\nxIUgamHFusWEIPCfmYgK\n",
+          encoding: "base64",
+          _links: {
+            self: "https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md?ref=master",
+            git: "https://api.github.com/repos/pawelpacana/test-source/git/blobs/34773833eda5caf2352a1ab8c1ba34e246ab9554",
+            html: "https://github.com/pawelpacana/test-source/blob/master/posts/x-post.md"
+          }
+        }
+      end
+
+      def posts_body
+        [
+          {
+            name: "post.md",
+            path: "posts/post.md",
+            sha: "3c612584217e21ae00d532a86e0e35685131dbba",
+            size: 23,
+            url: "https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master",
+            html_url: "https://github.com/pawelpacana/test-source/blob/master/posts/post.md",
+            git_url: "https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba",
+            download_url: "https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/post.md",
+            type: "file",
+            _links: {
+              self: "https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md?ref=master",
+              git: "https://api.github.com/repos/pawelpacana/test-source/git/blobs/3c612584217e21ae00d532a86e0e35685131dbba",
+              html: "https://github.com/pawelpacana/test-source/blob/master/posts/post.md"
+            }
+          },
+          {
+            name: "x-post.md",
+            path: "posts/x-post.md",
+            sha: "34773833eda5caf2352a1ab8c1ba34e246ab9554",
+            size: 150,
+            url: "https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md?ref=master",
+            html_url: "https://github.com/pawelpacana/test-source/blob/master/posts/x-post.md",
+            git_url: "https://api.github.com/repos/pawelpacana/test-source/git/blobs/34773833eda5caf2352a1ab8c1ba34e246ab9554",
+            download_url: "https://raw.githubusercontent.com/pawelpacana/test-source/master/posts/x-post.md",
+            type: "file",
+            _links: {
+              self: "https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md?ref=master",
+              git: "https://api.github.com/repos/pawelpacana/test-source/git/blobs/34773833eda5caf2352a1ab8c1ba34e246ab9554",
+              html: "https://github.com/pawelpacana/test-source/blob/master/posts/x-post.md"
+            }
+          }
+        ]
+      end
+
+      def json_response(body)
+        { status: 200, body: JSON.dump(body), headers: { CONTENT_TYPE: 'application/json' } }
+      end
+
+      def test_items_out_of_order
+        VCR.turn_off!
+        stub_request(:get, "https://api.github.com/repos/pawelpacana/test-source/contents/posts")
+          .to_return { json_response(posts_body) }
+        stub_request(:get, "https://api.github.com/repos/pawelpacana/test-source/contents/posts/x-post.md")
+          .to_return { json_response(x_post_body) }
+        stub_request(:get, "https://api.github.com/repos/pawelpacana/test-source/contents/posts/post.md")
+          .to_return { sleep(0.1); json_response(post_body) }
+
+
+        items = source_with_concurrency.items
+        assert_equal items, items.sort_by { |item| item.identifier }
+      ensure
+        VCR.turn_on!
       end
 
       def test_item
