@@ -4,110 +4,189 @@ PATH
     nanoc-github (1.2.0)
       concurrent-ruby (>= 1.1.6, < 2.0)
       faraday-http-cache
+      faraday-retry
       nanoc (~> 4.0)
-      octokit (~> 4.0)
+      octokit (~> 10.0)
+      pstore (~> 0.2)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
-    colored (1.2)
-    concurrent-ruby (1.1.8)
-    crack (0.4.3)
-      safe_yaml (~> 1.0.0)
-    cri (2.15.11)
-    ddmemoize (1.0.0)
-      ddmetrics (~> 1.0)
-      ref (~> 2.0)
-    ddmetrics (1.0.1)
+    addressable (2.8.8)
+      public_suffix (>= 2.0.2, < 8.0)
+    base64 (0.3.0)
+    bigdecimal (4.0.1)
+    coderay (1.1.3)
+    concurrent-ruby (1.3.6)
+    crack (1.0.1)
+      bigdecimal
+      rexml
+    cri (2.15.12)
+    ddmetrics (1.1.0)
     ddplugin (1.0.3)
-    diff-lcs (1.4.4)
-    faraday (1.4.1)
-      faraday-excon (~> 1.1)
-      faraday-net_http (~> 1.0)
-      faraday-net_http_persistent (~> 1.1)
-      multipart-post (>= 1.2, < 3)
-      ruby2_keywords (>= 0.0.4)
-    faraday-excon (1.1.0)
-    faraday-http-cache (2.2.0)
+    diff-lcs (1.6.2)
+    faraday (2.14.0)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-http-cache (2.6.1)
       faraday (>= 0.8)
-    faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.1.0)
-    hamster (3.0.0)
-      concurrent-ruby (~> 1.0)
-    hashdiff (1.0.1)
+    faraday-net_http (3.4.2)
+      net-http (~> 0.5)
+    faraday-retry (2.4.0)
+      faraday (~> 2.0)
+    hashdiff (1.2.1)
+    immutable-ruby (0.2.0)
+      concurrent-ruby (~> 1.1)
+      sorted_set (~> 1.0)
+    io-console (0.8.2)
+    json (2.18.1)
     json_schema (0.21.0)
-    minitest (5.14.0)
-    multipart-post (2.1.1)
-    nanoc (4.12.1)
+    logger (1.7.0)
+    memo_wise (1.13.0)
+    method_source (1.1.0)
+    minitest (6.0.1)
+      prism (~> 1.5)
+    nanoc (4.14.6)
       addressable (~> 2.5)
-      colored (~> 1.2)
-      nanoc-checking (~> 1.0)
-      nanoc-cli (= 4.12.1)
-      nanoc-core (= 4.12.1)
+      nanoc-checking (~> 1.0, >= 1.0.2)
+      nanoc-cli (= 4.14.6)
+      nanoc-core (= 4.14.6)
       nanoc-deploying (~> 1.0)
       parallel (~> 1.12)
       tty-command (~> 0.8)
       tty-which (~> 0.4)
-    nanoc-checking (1.0.1)
-      nanoc-cli (~> 4.11, >= 4.11.15)
-      nanoc-core (~> 4.11, >= 4.11.15)
-    nanoc-cli (4.12.1)
+    nanoc-checking (1.0.6)
+      nanoc-cli (~> 4.12, >= 4.12.5)
+      nanoc-core (~> 4.12, >= 4.12.5)
+    nanoc-cli (4.14.6)
       cri (~> 2.15)
       diff-lcs (~> 1.3)
-      nanoc-core (= 4.12.1)
+      logger (~> 1.6)
+      nanoc-core (= 4.14.6)
+      pry
       zeitwerk (~> 2.1)
-    nanoc-core (4.12.1)
+    nanoc-core (4.14.6)
+      base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
-      ddmemoize (~> 1.0)
       ddmetrics (~> 1.0)
       ddplugin (~> 1.0)
-      hamster (~> 3.0)
+      immutable-ruby (~> 0.1)
       json_schema (~> 0.19)
+      memo_wise (~> 1.5)
       slow_enumerator_tools (~> 1.0)
       tty-platform (~> 0.2)
       zeitwerk (~> 2.1)
-    nanoc-deploying (1.0.1)
+    nanoc-deploying (1.0.3)
       nanoc-checking (~> 1.0)
       nanoc-cli (~> 4.11, >= 4.11.15)
       nanoc-core (~> 4.11, >= 4.11.15)
-    octokit (4.20.0)
-      faraday (>= 0.9)
-      sawyer (~> 0.8.0, >= 0.5.3)
-    parallel (1.20.1)
+    net-http (0.9.1)
+      uri (>= 0.11.1)
+    octokit (10.0.0)
+      faraday (>= 1, < 3)
+      sawyer (~> 0.9)
+    parallel (1.27.0)
     pastel (0.8.0)
       tty-color (~> 0.5)
-    public_suffix (4.0.6)
-    rake (13.0.1)
-    ref (2.0.0)
-    ruby2_keywords (0.0.4)
-    safe_yaml (1.0.5)
-    sawyer (0.8.2)
+    prism (1.9.0)
+    pry (0.16.0)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+      reline (>= 0.6.0)
+    pstore (0.2.0)
+    public_suffix (7.0.2)
+    rake (13.3.1)
+    rbtree (0.4.6)
+    reline (0.6.3)
+      io-console (~> 0.5)
+    rexml (3.4.4)
+    sawyer (0.9.3)
       addressable (>= 2.3.5)
-      faraday (> 0.8, < 2.0)
+      faraday (>= 0.17.3, < 3)
+    set (1.1.2)
     slow_enumerator_tools (1.1.0)
+    sorted_set (1.0.3)
+      rbtree
+      set (~> 1.0)
     tty-color (0.6.0)
     tty-command (0.10.1)
       pastel (~> 0.8)
     tty-platform (0.3.0)
-    tty-which (0.4.2)
-    vcr (5.1.0)
-    webmock (3.8.3)
-      addressable (>= 2.3.6)
+    tty-which (0.5.0)
+    uri (1.1.1)
+    vcr (6.4.0)
+    webmock (3.26.1)
+      addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    zeitwerk (2.4.2)
+    zeitwerk (2.7.4)
 
 PLATFORMS
+  arm64-darwin-25
   ruby
 
 DEPENDENCIES
-  minitest (~> 5.14)
+  minitest
   nanoc-github!
-  rake (~> 13.0)
-  vcr (~> 5.1.0)
-  webmock (~> 3.8)
+  rake
+  vcr
+  webmock
+
+CHECKSUMS
+  addressable (2.8.8) sha256=7c13b8f9536cf6364c03b9d417c19986019e28f7c00ac8132da4eb0fe393b057
+  base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
+  bigdecimal (4.0.1) sha256=8b07d3d065a9f921c80ceaea7c9d4ae596697295b584c296fe599dd0ad01c4a7
+  coderay (1.1.3) sha256=dc530018a4684512f8f38143cd2a096c9f02a1fc2459edcfe534787a7fc77d4b
+  concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
+  crack (1.0.1) sha256=ff4a10390cd31d66440b7524eb1841874db86201d5b70032028553130b6d4c7e
+  cri (2.15.12) sha256=8abfe924ef53e772a8e4ee907e791d3bfcfca78bc62a5859e3b9899ba29956e5
+  ddmetrics (1.1.0) sha256=ec51ebc809c6c2f0e3b760c7030f2f570affa7553532d673093888107b0aed06
+  ddplugin (1.0.3) sha256=5b270a7b77b49e104699886638758d283901f24c38231baf89c132894dde0b92
+  diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962
+  faraday (2.14.0) sha256=8699cfe5d97e55268f2596f9a9d5a43736808a943714e3d9a53e6110593941cd
+  faraday-http-cache (2.6.1) sha256=7772ae61c5fe1c0243452dec1f069b15bcc3304e9436e4f8545ccdb5963c4285
+  faraday-net_http (3.4.2) sha256=f147758260d3526939bf57ecf911682f94926a3666502e24c69992765875906c
+  faraday-retry (2.4.0) sha256=7b79c48fb7e56526faf247b12d94a680071ff40c9fda7cf1ec1549439ad11ebe
+  hashdiff (1.2.1) sha256=9c079dbc513dfc8833ab59c0c2d8f230fa28499cc5efb4b8dd276cf931457cd1
+  immutable-ruby (0.2.0) sha256=1ab896e0d9c8c3fe21ddc3dd29be87511da2f6b0970c5a1c36838a9a4a4605e7
+  io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
+  json (2.18.1) sha256=fe112755501b8d0466b5ada6cf50c8c3f41e897fa128ac5d263ec09eedc9f986
+  json_schema (0.21.0) sha256=d6e1eaf004a5185b7679eee34286a79d48e467d794ff68981d72ad23d3b2ec5b
+  logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
+  memo_wise (1.13.0) sha256=30220c38c4cef410849bc73553c58664dc2c91c6379e4a1df22aea02358b716b
+  method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
+  minitest (6.0.1) sha256=7854c74f48e2e975969062833adc4013f249a4b212f5e7b9d5c040bf838d54bb
+  nanoc (4.14.6) sha256=013d8ae732b0b55b2228a7a26a0ee77ff3def38fc7384d9c25276183460a4152
+  nanoc-checking (1.0.6) sha256=dd1d3c57cc75a9580f082c77dfa22221806ff65d28b25b1ab0c7471455bdd481
+  nanoc-cli (4.14.6) sha256=eb4aec67de6ea3ac414d8b6c1d4f0ff4bd89ddc333962c1ef64af158f8fca11d
+  nanoc-core (4.14.6) sha256=7562f2ad5bbc834462e8a831a8c0fbe2fbf6416451fcd86b6f9861fb02f9f6b9
+  nanoc-deploying (1.0.3) sha256=ca583eab659a3dd92aa8ff227c089af6042c85b0e9fc1d7ce527798eb974fc5b
+  nanoc-github (1.2.0)
+  net-http (0.9.1) sha256=25ba0b67c63e89df626ed8fac771d0ad24ad151a858af2cc8e6a716ca4336996
+  octokit (10.0.0) sha256=82e99a539b7637b7e905e6d277bb0c1a4bed56735935cc33db6da7eae49a24e8
+  parallel (1.27.0) sha256=4ac151e1806b755fb4e2dc2332cbf0e54f2e24ba821ff2d3dcf86bf6dc4ae130
+  pastel (0.8.0) sha256=481da9fb7d2f6e6b1a08faf11fa10363172dc40fd47848f096ae21209f805a75
+  prism (1.9.0) sha256=7b530c6a9f92c24300014919c9dcbc055bf4cdf51ec30aed099b06cd6674ef85
+  pry (0.16.0) sha256=d76c69065698ed1f85e717bd33d7942c38a50868f6b0673c636192b3d1b6054e
+  pstore (0.2.0) sha256=d6e5c7e8e22392235e88bbe82959059ba768a797b5bd0ebf5ac80a3311ce74a8
+  public_suffix (7.0.2) sha256=9114090c8e4e7135c1fd0e7acfea33afaab38101884320c65aaa0ffb8e26a857
+  rake (13.3.1) sha256=8c9e89d09f66a26a01264e7e3480ec0607f0c497a861ef16063604b1b08eb19c
+  rbtree (0.4.6) sha256=14eea4469b24fd2472542e5f3eb105d6344c8ccf36f0b56d55fdcfeb4e0f10fc
+  reline (0.6.3) sha256=1198b04973565b36ec0f11542ab3f5cfeeec34823f4e54cebde90968092b1835
+  rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
+  sawyer (0.9.3) sha256=0d0f19298408047037638639fe62f4794483fb04320269169bd41af2bdcf5e41
+  set (1.1.2) sha256=ca33a60d202e788041d94a5d4c12315b1639875576f1a266f3a10913646d8ef1
+  slow_enumerator_tools (1.1.0) sha256=e61a598f1c8309ac731d21659a79767c20ff345458cfc70819ae57df25910e5e
+  sorted_set (1.0.3) sha256=4f2b8bee6e8c59cbd296228c0f1f81679357177a8b6859dcc2a99e86cce6372f
+  tty-color (0.6.0) sha256=6f9c37ca3a4e2367fb2e6d09722762647d6f455c111f05b59f35730eeb24332a
+  tty-command (0.10.1) sha256=0c6c471fcb932d55518734eb4e2e07e9efdd2918713cc39bb7393ba862471192
+  tty-platform (0.3.0) sha256=e23937b100e84a1bf9ce32352b4c04d526da1c2510668ce1f27f8ae79142050a
+  tty-which (0.5.0) sha256=5824055f0d6744c97e7c4426544f01d519c40d1806ef2ef47d9854477993f466
+  uri (1.1.1) sha256=379fa58d27ffb1387eaada68c749d1426738bd0f654d812fcc07e7568f5c57c6
+  vcr (6.4.0) sha256=077ac92cc16efc5904eb90492a18153b5e6ca5398046d8a249a7c96a9ea24ae6
+  webmock (3.26.1) sha256=4f696fb57c90a827c20aadb2d4f9058bbff10f7f043bd0d4c3f58791143b1cd7
+  zeitwerk (2.7.4) sha256=2bef90f356bdafe9a6c2bd32bcd804f83a4f9b8bc27f3600fff051eb3edcec8b
 
 BUNDLED WITH
-   1.17.3
+  4.0.6
