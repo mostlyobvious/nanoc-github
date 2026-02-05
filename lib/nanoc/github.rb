@@ -2,6 +2,7 @@ require "nanoc"
 require "octokit"
 require "concurrent-ruby"
 require "faraday/http_cache"
+require "faraday/retry"
 require "pstore"
 
 module Nanoc
@@ -53,7 +54,7 @@ module Nanoc
             store: Cache.new(tmp_dir),
             logger: verbose ? logger : nil
           builder.use ModifyMaxAge, time: max_age
-          builder.use Faraday::Request::Retry,
+          builder.use Faraday::Retry::Middleware,
             exceptions: [Octokit::ServerError]
           builder.use Octokit::Middleware::FollowRedirects
           builder.use Octokit::Response::RaiseError
